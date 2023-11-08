@@ -1,2 +1,3 @@
-# Here Is Some Interview Questions:
+# Here Is Some TypeScript Interview Questions:
+
 ### hello

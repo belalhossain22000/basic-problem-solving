@@ -58,7 +58,7 @@ const findNumberSum = <T>(mixedData: T[]): number => {
     let total = 0;
     mixedData.forEach(element => {
         if (typeof element == 'number') {
-            total += element
+            total += element as number
         }
         return 0
 
@@ -88,7 +88,6 @@ const objectCombined = <Tc, Td>(car: Tc, driver: Td): Tc & Td => {
 }
 
 
-
 //problem-6
 
 const calculateSumFromArray = (param: unknown): void => {
@@ -102,10 +101,8 @@ const calculateSumFromArray = (param: unknown): void => {
 
 //problem-7
 
-function findFirstOccurrence<T>(arr: T[], value: T): number {
+const findFirstOccurrence = <T>(arr: T[], value: T): number => {
     const index = arr.findIndex((item) => item === value);
     return index !== -1 ? index : -1;
 }
-
-
 
