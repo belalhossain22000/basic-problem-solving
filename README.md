@@ -56,3 +56,14 @@ An async/await will always return a Promise. Even if you omit the Promise keywor
 Advantage:More readable and concise compared to callbacks and promises also 
 built-in error handling with try-catch blocks.Can be used with promises and async functions.void callback hell by chaining asynchronous operations in a more readable way.Built-in error handling with catch method.Can be combined or transformed using higher-order functions such as .then and .map.
 In conclusion, it’s a trade-off between simplicity and readability. Callbacks are the simplest to understand and widely supported but can lead to callback hell. Promises are more readable and have built-in error handling, but are less widely supported. Async/await is the most readable.
+
+
+### 4/How can you use TypeScript's enums, and what are their advantages?.
+
+Enums can be used in a variety of ways. For example, you can use them to:
+
+Define a set of possible values for a function parameter or return value.Create a list of options for a user interface element.Represent different states in a machine state diagram.Enums can also be used to improve the type safety of your code. For example, if you have a function that takes a Weekday enum as a parameter, you can be sure that the function will only be called with a valid weekday value.
+
+Here are some of the advantages of using TypeScript enums:
+
+ Enums can make your code more readable by replacing magic numbers with named constants. Enums can make your code more maintainable by making it easier to understand and change the meaning of the constants. Enums can improve the type safety of your code by ensuring that variables and functions are used with the correct values.Overall, TypeScript enums are a powerful tool that can make your code more readable, maintainable, and type-safe.
