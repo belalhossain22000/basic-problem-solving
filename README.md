@@ -1,12 +1,12 @@
 # Here Is Some TypeScript Interview Questions:
 
-### What are some benefits of using TypeScript over JavaScript in a project?
+### 1/What are some benefits of using TypeScript over JavaScript in a project?
 
 #### TypeScript is an open-source language that is a statically-typed superset of JavaScript. It was developed and maintained by Microsoft, and it has been gaining popularity among developers due to its numerous benefits.
 * The Advantages of TypeScript over JavaScript
 TypeScript is especially beneficial for large-scale projects where code maintenance and scalability are important. TypeScript has a rich set of tools, such as an integrated development environment (IDE) and text editor support, that makes it easier to develop and debug code.One of the other benefits of TypeScript is strong typing. TypeScript requires you to declare the type of variables, which can help prevent type-related errors. This makes code easier to read, maintain, and debug, and can also help reduce the risk of security vulnerabilities.TypeScript's strong typing and type inference also make code more readable, especially for large projects.TypeScript also includes features like interfaces and classes, which are not available in JavaScript. Interfaces allow you to define a contract that classes must implement.TypeScript offers a range of benefits over JavaScript, including improved type safety, tooling, and integration. By using TypeScript, developers code can be high-quality, scalable, and maintainable that is easier to debug and test. 
 
-### What is the purpose of the optional chaining (?.) and nullish coalescing (??) operators in TypeScript, and how do they work? Provide an example for each
+### 2/What is the purpose of the optional chaining (?.) and nullish coalescing (??) operators in TypeScript, and how do they work? Provide an example for each
 
 #### The optional chaining (?.) and nullish coalescing (??) operators in TypeScript (and JavaScript) are designed to handle situations involving optional or potentially nullable values, making your code more resilient and concise.
 
@@ -45,3 +45,14 @@ console.log(phoneNumber);
 console.log(age);
 
 These operators are particularly valuable when working with data from external sources such as APIs where missing or undefined values can be common.
+
+
+### 3/How do you handle asynchronous operations in TypeScript, and what are the advantages of using async/await over callbacks or Promises?.
+
+async/await is a surprisingly easy syntax to work with promises. It provides an easy interface to read and write promises in a way that makes them appear synchronous.
+
+An async/await will always return a Promise. Even if you omit the Promise keyword, the compiler will wrap the function in an immediately resolved Promise. This enables you to treat the return value of an async function as a Promise, which is quite useful when you need to resolve numerous asynchronous functions.
+
+Advantage:More readable and concise compared to callbacks and promises also 
+built-in error handling with try-catch blocks.Can be used with promises and async functions.void callback hell by chaining asynchronous operations in a more readable way.Built-in error handling with catch method.Can be combined or transformed using higher-order functions such as .then and .map.
+In conclusion, it’s a trade-off between simplicity and readability. Callbacks are the simplest to understand and widely supported but can lead to callback hell. Promises are more readable and have built-in error handling, but are less widely supported. Async/await is the most readable.
