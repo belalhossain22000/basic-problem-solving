@@ -10,7 +10,6 @@ const checkType = (input: string | number): number => {
 }
 
 
-
 //problem-2
 
 interface Address {
@@ -23,11 +22,9 @@ interface Person {
     phone?: string
 }
 
-const getAddressCity = (person: Person): string => {
-    if (person?.address?.city) {
-        return person?.address?.city
-    }
-    return 'please enter a correct person'
+const getAddressCity = (person: Person): string | undefined => {
+
+    return person?.address?.city
 }
 
 
