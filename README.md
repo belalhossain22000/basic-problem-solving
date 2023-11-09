@@ -67,3 +67,69 @@ Define a set of possible values for a function parameter or return value.Create 
 Here are some of the advantages of using TypeScript enums:
 
  Enums can make your code more readable by replacing magic numbers with named constants. Enums can make your code more maintainable by making it easier to understand and change the meaning of the constants. Enums can improve the type safety of your code by ensuring that variables and functions are used with the correct values.Overall, TypeScript enums are a powerful tool that can make your code more readable, maintainable, and type-safe.
+
+
+ ### 5/Explain the role of type guards in TypeScript and provide an example of a custom type guard.
+
+ Type guards are a valuable feature in TypeScript that allows developers to write more type-safe code by narrowing down the type of a variable or expression within a conditional block at runtime. By using type guards, TypeScript can detect and prevent runtime errors that may occur due to incorrect types.
+
+TypeScript provides several built-in type guards, such as the typeof operator, instanceof operator, and in operator, that allow for performing type checks at runtime. Additionally, developers can create their own user-defined (custom) type guards by defining a function that returns a boolean value indicating whether a value is of a particular type or not.
+
+Type guards can be used in a variety of ways, such as:
+
+To check the type of a function parameter and ensure that it is of the correct type.
+To check the type of a variable before using it in a conditional statement.
+To check the type of a value before casting it to another type.
+
+*custom type guard example
+
+const isNumber=(value: any): value is number=> {
+    return typeof value === 'number';
+}
+
+function processValue(value: any): void {
+    if (isNumber(value)) {
+        console.log(value * 2);
+    } else {
+        console.log('Not a number');
+    }
+}
+
+processValue(42); 
+processValue('hello');
+
+
+
+### 6/Can you give an example of how to use "readonly" properties in TypeScript?
+
+What is readonly in TypeScript? It’s a feature of the language that tells the TypeScript compiler to make a property readonly. Readonly? Yes, that means you cannot reassign its value once it has been constructed. The only place a readonly property can be assigned is inside the TypeScript constructor.
+
+Using the readonly keyword is an instruction to prevent compile-time reassignment, however, it makes no guarantee that your code is “safe” and cannot be reassigned elsewhere.
+
+* example 
+class Product {
+  readonly name: string;
+  price: number;
+  constructor(name: string, price: number) {
+    this.name = name;
+    this.price = price;
+  }
+}
+const espresso = new Product('Espresso', 399);
+
+ Cannot assign to 'name' because it is a read-only property.
+espresso.name = 'Double Espresso';
+
+
+### 7/Explain what a union type is in TypeScript and provide an example of its usage.
+
+The TypeScript union has the ability to combine one or two different types of data. It is the most powerful way to express a variable with multiple types. Use pipe ("|") symbol to combine two or more data types to achieve Union type.
+
+* example 
+syntax (type1|type2|type3|...|type-n)
+
+let value: number | string; 
+value = 190; 
+console.log("Numeric value of the value: " + value); 
+value = "Welcome to TypeScript!"; 
+console.log("String value of the value: " + value); 
