@@ -2,6 +2,7 @@
 /**
  * Design a TypeScript function that takes a parameter of a union type (e.g., string | number). If it's a string, return its length. If it's a number, return the square of that number.
 */
+// Ans :
 const checkType = (input: string | number): number => {
     if (typeof input == 'string') {
         return input.length
@@ -17,7 +18,7 @@ const checkType = (input: string | number): number => {
 /***
  * Create an interface called Person with optional properties address and phone. The address property itself will be another object containing city and street properties. Implement a function named getAddressCity that takes an argument of type Person and returns the city from the address property of the Person object. Use optional chaining to prevent any type errors.
  */
-
+// Ans :
 interface Address {
     city?: string;
     street?: string
@@ -38,7 +39,7 @@ const getAddressCity = (person: Person): string | undefined => {
 /**
  * Create a type guard function isCat that checks if an object is an instance of a Cat class. If it does, the function says "yes, it's a cat." If it doesn't match, the function says "no, it's not a cat."
  */
-
+// Ans :
 class Cat {
     name: string;
     species: string;
@@ -66,7 +67,7 @@ To solve this in TypeScript, you'll look at each thing in the list named mixedDa
 
 Every time you find a number in the list, you'll add it to a total. You'll start at zero and then keep adding the numbers you find. If no number is found in the list return 0. To make sure TypeScript knows these things are numbers, you'll use type assertions.
  */
-
+// Ans :
 const findNumberSum = <T>(mixedData: T[]): number => {
     let total = 0;
     mixedData.forEach(element => {
@@ -84,7 +85,7 @@ const findNumberSum = <T>(mixedData: T[]): number => {
 /**
  * Define two interfaces: Car with properties like make, model, and year, and Driver with properties like name and licenseNumber. Create a function that takes two objects of type Car and Driver and returns an object with the combined properties of both types.
  */
-
+// Ans :
 interface Car {
     make: string;
     model: string;
@@ -108,6 +109,7 @@ const objectCombined = <Tc, Td>(car: Tc, driver: Td): Tc & Td => {
 /**
  * Write a TypeScript function that takes a parameter of type unknown and uses a type guard to check whether the parameter is an array of numbers. If it is, calculate the sum of the numbers and log it. If it's not, log an error message.
  */
+// Ans :
 const calculateSumFromArray = (param: unknown): void => {
     if (Array.isArray(param) && param.every((item) => typeof item === 'number')) {
         const sum = (param as number[]).reduce((acc, val) => acc + val, 0);
